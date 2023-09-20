@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #quote-container {
+            padding: 20px;
+            border: 1px solid #eeeeee;
+            background-color: #1e0e13;
+            border-top-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            width: 40%;
+            height: fit-content;
+            color: #fff;
+            font-size: 25px;
+        }
+
+        #generate-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="quote-container">
+        <p id="quote">Loading... </p>
+        <p><button id="generate-button" onclick="quoteGetter()">Generate New Quote</button></p>
+    </div>
+
+    <script>
+        // JavaScript code goes here
+        let quotecontainer = document.getElementById("quote-container");
+        let quote = document.getElementById("quote");
+        let randomquote = Math.floor(Math.random() * 20) + 1;
+        let randomcolors = Math.floor(Math.random() * 6) + 1; 
+        
+        let quote0 =  "0."
+        let quote1 = "Life is a canvas; your actions are the strokes that create your masterpiece of existence."
+        let quote2 = "In the darkest moments, the light within you shines brightest, guiding you to triumph."
+        let quote3 = "Time is a currency; spend it wisely on experiences that enrich your soul."
+        let quote4 = "Success is not final; failure is not fatal. It's the courage to continue that counts."
+        let quote5 = "Kindness is a language that transcends borders, and a smile is its universal dialect."
+        let quote6 = "Embrace change as the river of growth, for stagnant waters nurture nothing but weeds."
+        let quote7 = "Dreams are the architects of reality; they lay the foundation for tomorrow's achievements."
+        let quote8 = "In the symphony of life, every person plays a unique note; together, we create harmony."
+        let quote9 = "Love is the thread that weaves hearts together, forming the tapestry of our lives."
+        let quote10 = "The present moment is a gift; unwrap it with gratitude and live it to the fullest."
+        let quote11 = "In the journey of life, the detours often lead to the most breathtaking destinations."
+        let quote12 = "Silence is the canvas upon which the most profound thoughts and ideas are painted."
+        let quote13 = "Strength is not the absence of fear but the courage to face it head-on."
+        let quote14 = "Happiness is not found in possessions but in the moments that fill your heart with joy."
+        let quote15 = "The universe conspires in mysterious ways; trust the process and embrace serendipity."
+        let quote16 = "Character is not determined by circumstances but by the choices we make in them."
+        let quote17 = "Success is the result of perseverance and the willingness to learn from failure."
+        let quote18 = "A grateful heart is a magnet for abundance, attracting blessings in every direction."
+        let quote19 = "Wisdom is the art of learning from the past, living in the present, and planning for the future."
+        let quote20 = "Life's greatest adventures begin at the edge of your comfort zone; dare to take the first step."
+        let quotes = [quote0, quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8, quote9, quote10, quote11, quote12, quote13, quote14, quote15, quote16, quote17, quote18, quote19, quote20];
+  
+
+        let color = ["#1919d1", "#511191", "#800643bd", "#b60fb6", "#611010", "#0f3612"];
+
+        const element = quotes[randomquote];
+        quote.innerHTML = element;
+        quotecontainer.style.backgroundColor = color[randomcolors];
+                                    
+       
+        function quoteGetter() {
+            location.reload()
+
+        }
+        
+
+    </script>
+</body>
+
+</html>
