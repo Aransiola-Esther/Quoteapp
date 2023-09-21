@@ -39,58 +39,44 @@
             color: #fff;
             border: none;
         }
+
+        #author {
+            font-size: 15px;
+        }
     </style>
 </head>
 
-<body>
+<body id="bgcolor">
     <div id="quote-container">
         <p id="quote">Loading... </p>
+        <span id="author"></span>
         <p><button id="generate-button" onclick="quoteGetter()">Generate New Quote</button></p>
     </div>
 
     <script>
         // JavaScript code goes here
-        let quotecontainer = document.getElementById("quote-container");
+        let bgbody = document.getElementById("bgcolor");
         let quote = document.getElementById("quote");
         let randomquote = Math.floor(Math.random() * 20) + 1;
-        let randomcolors = Math.floor(Math.random() * 6) + 1; 
-        
-        let quote0 =  "0."
-        let quote1 = "Life is a canvas; your actions are the strokes that create your masterpiece of existence."
-        let quote2 = "In the darkest moments, the light within you shines brightest, guiding you to triumph."
-        let quote3 = "Time is a currency; spend it wisely on experiences that enrich your soul."
-        let quote4 = "Success is not final; failure is not fatal. It's the courage to continue that counts."
-        let quote5 = "Kindness is a language that transcends borders, and a smile is its universal dialect."
-        let quote6 = "Embrace change as the river of growth, for stagnant waters nurture nothing but weeds."
-        let quote7 = "Dreams are the architects of reality; they lay the foundation for tomorrow's achievements."
-        let quote8 = "In the symphony of life, every person plays a unique note; together, we create harmony."
-        let quote9 = "Love is the thread that weaves hearts together, forming the tapestry of our lives."
-        let quote10 = "The present moment is a gift; unwrap it with gratitude and live it to the fullest."
-        let quote11 = "In the journey of life, the detours often lead to the most breathtaking destinations."
-        let quote12 = "Silence is the canvas upon which the most profound thoughts and ideas are painted."
-        let quote13 = "Strength is not the absence of fear but the courage to face it head-on."
-        let quote14 = "Happiness is not found in possessions but in the moments that fill your heart with joy."
-        let quote15 = "The universe conspires in mysterious ways; trust the process and embrace serendipity."
-        let quote16 = "Character is not determined by circumstances but by the choices we make in them."
-        let quote17 = "Success is the result of perseverance and the willingness to learn from failure."
-        let quote18 = "A grateful heart is a magnet for abundance, attracting blessings in every direction."
-        let quote19 = "Wisdom is the art of learning from the past, living in the present, and planning for the future."
-        let quote20 = "Life's greatest adventures begin at the edge of your comfort zone; dare to take the first step."
-        let quotes = [quote0, quote1, quote2, quote3, quote4, quote5, quote6, quote7, quote8, quote9, quote10, quote11, quote12, quote13, quote14, quote15, quote16, quote17, quote18, quote19, quote20];
-  
+        let randomcolors = Math.floor(Math.random() * 6) + 1;
+
+
+        let quotes = [[""], ["To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.", "-Ralph Waldo Emerson"], ["In three words I can sum up everything I've learned about life: it goes on.", "Steve Jobs"], ["The only way to do great work is to love what you do.", "-Winston Churchill"], ["Success is not final, failure is not fatal: It is the courage to continue that counts.", "-Ralph Waldo Emerson"], ["The only thing we have to fear is fear itself.", "-Oscar Wilde"], ["Live in the sunshine, swim the sea, drink the wild air.", "-John Lennon"], ["Be yourself; everyone else is already taken.", "-Heraclitus"], ["Life is what happens when you're busy making other plans.", "-William Shakespeare"], ["The only constant in life is change.", "-Franklin D. Roosevelt"], ["To be or not to be, that is the question.", "-Martin Luther King Jr."], ["The only limit to our realization of tomorrow will be our doubts of today.", "-Jordan Belfort"], ["In the end, we will remember not the words of our enemies, but the silence of our friends.", "-Thomas A. Edison"], ["The only thing standing between you and your goal is the story you keep telling yourself as to why you can't achieve it.", "-John Lennon"], ["I have not failed. I've just found 10,000 ways that won't work.", "-John Lennon"], ["All you need is love.", "-Oscar Wilde"], ["We are what we repeatedly do. Excellence, then, is not an act, but a habit.", "-Eleanor Roosevelt"], ["To love oneself is the beginning of a lifelong romance.", "-Socrates"], ["The future belongs to those who believe in the beauty of their dreams.", "-Eleanor Roosevelt"], ["The only true wisdom is in knowing you know nothing.", "-Socrates"], ["Life is really simple, but we insist on making it complicated.", "-Confucius"]]
 
         let color = ["#1919d1", "#511191", "#800643bd", "#b60fb6", "#611010", "#0f3612"];
 
         const element = quotes[randomquote];
-        quote.innerHTML = element;
-        quotecontainer.style.backgroundColor = color[randomcolors];
-                                    
-       
+        quote.innerHTML = element[0];
+        author.innerHTML = element[1];
+
+        bgbody.style.backgroundColor = color[randomcolors];
+
+
         function quoteGetter() {
             location.reload()
 
         }
-        
+
 
     </script>
 </body>
